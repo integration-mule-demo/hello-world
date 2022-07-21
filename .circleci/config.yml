@@ -25,7 +25,9 @@ jobs:
       - run:
           name: Build
           command: |
-            mvn clean compile
+            mvn clean compile -s settings.xml \
+            -Danypoint.user=${ANYPOINT_USER} \
+            -Danypoint.password=${ANYPOINT_PASSWORD}
       - run:
           name: mUnit Test
           command: |
