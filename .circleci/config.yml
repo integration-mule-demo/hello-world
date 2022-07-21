@@ -41,9 +41,4 @@ jobs:
             mvn -s settings.xml clean deploy -DmuleDeploy\
             -DskipTests \
             -Danypoint.user=${ANYPOINT_USER} \
-            -Danypoint.password=${ANYPOINT_PASSWORD} \
-            -Dcloudhub.env=${MULE_ENV} \
-            -Dcloudhub.name=${MULE_APP_NAME} \
-            -Dworker.number=${MULE_WORKER} \
-            -Dworker.size=${MULE_WORKER_TYP} \            
-            -DobjectStoreV2=true \
+            -Danypoint.password=${ANYPOINT_PASSWORD} 
