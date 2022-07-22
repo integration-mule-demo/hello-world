@@ -17,8 +17,15 @@ jobs:
           MULE_REGION: us-east-2
           MULE_OSv2: true
     steps:
+      - checkout
+      - restore_cache:
+          key: 'mulesoft-ci-cd-{{ checksum "pom.xml" }}'
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: 'mulesoft-ci-cd-{{ checksum "pom.xml" }}'
       - run:
-          name: Test
+          name: Build
           command: |
             mvn clean compile 
       
