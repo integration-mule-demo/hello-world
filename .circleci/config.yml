@@ -37,8 +37,6 @@ jobs:
       - run:
           name: cloudhub deployment
           no_output_timeout: 20m
-          command: |
-            artifactName=$(ls *.jar | head -1)
-            mvn deploy -DmuleDeploy \
-            -Dmule.artifact=$artifactName 
+          command: |            
+            mvn deploy -DmuleDeploy 
             
