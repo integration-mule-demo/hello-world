@@ -27,16 +27,15 @@
 				
 				<configuration>
 					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
+						<username>${anypoint.user}</username>
+						<password>${anypoint.password}</password>
+						<workers>${anypoint.workers}</workers>
+						<workerType>${anypoint.workerType}</workerType>
+						<environment>${anypoint.env}</environment>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>dtluisf-1</username>
-						<password>Luis1980Plus</password>
-						<applicationName>${app.name}</applicationName>
-						<environment>${env}</environment>
-						<workerType>MICRO</workerType>
-						<region>us-east-2</region>
-						<workers>1</workers>
-						<objectStoreV2>true</objectStoreV2>
+						<applicationName>${anypoint.appName}</applicationName>																		
+						<region>${anypoint.region}</region>
+						<objectStoreV2>${anypoint.osv2}</objectStoreV2>
 					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
 				</configuration>								
