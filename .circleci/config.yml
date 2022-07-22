@@ -17,14 +17,6 @@ jobs:
           MULE_REGION: us-east-2
           MULE_OSv2: true
     steps:
-      - run: 
-          command: |            
-             echo "something" \
-             echo ${ANYPOINT_USER} \
-             echo $ANYPOINT_PASSWORD \
-             echo $MULE_APP_NAME \
-             echo $MULE_ENV \
-             echo $MULE_WORKER_TYP \
-             echo $MULE_WORKER \
-             echo $MULE_REGION \
-             echo $MULE_OSv2 \
+      - run: echo $ANYPOINT_USER
+          
+             
