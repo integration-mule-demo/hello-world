@@ -19,7 +19,8 @@ jobs:
     steps:
       - run: 
           command: |            
-             echo $ANYPOINT_USER \
+             echo "something" \
+             echo ${ANYPOINT_USER} \
              echo $ANYPOINT_PASSWORD \
              echo $MULE_APP_NAME \
              echo $MULE_ENV \
