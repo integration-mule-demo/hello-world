@@ -28,4 +28,20 @@ jobs:
           name: Build
           command: |
             mvn clean compile 
-      
+      - run:
+          name: mUnit Test
+          command: |
+            mvn clean test 
+      - run:
+          name: cloudhub deployment
+          no_output_timeout: 20m
+          command: |            
+            mvn clean package deploy -DmuleDeploy  \
+            -Danypoint.user=${ANYPOINT_USER} \
+            -Danypoint.password=${ANYPOINT_PASSWORD} \
+            -Danypoint.workers=${MULE_WORKER} \
+            -Danypoint.workerType=${MULE_WORKER_TYP} \
+            -Danypoint.env=${MULE_ENV} \
+            -Danypoint.appName=${MULE_APP_NAME} \
+            -Danypoint.region=${MULE_REGION} \
+            -Danypoint.osv2=${MULE_OSv2}
