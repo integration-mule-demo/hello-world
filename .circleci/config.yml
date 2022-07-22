@@ -11,8 +11,8 @@ jobs:
       - image: 'circleci/openjdk:8-jdk'
         environment:
           MULE_APP_NAME: demo-sys-salesforce-api
-          MULE_ENV: SANDBOX
-          MULE_WORKER_TYP: MICRO
+          MULE_ENV: Sandbox
+          MULE_WORKER_TYP: Micro
           MULE_WORKER: 1
           MULE_REGION: us-east-2
           MULE_OSv2: true
